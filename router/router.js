@@ -4,7 +4,8 @@ const router = express.Router();
 
 import { 
     home,
-    operacion
+    operacion,
+    saludo
 } from '../controller/index.js';
 
 router
@@ -14,5 +15,9 @@ router
 router
     .route('/operacion/:numero')
     .get(operacion)
+
+router
+    .route('/saludo/:nombre')
+    .get(saludo)
 
 export default router;

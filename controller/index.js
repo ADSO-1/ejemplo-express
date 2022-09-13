@@ -14,8 +14,16 @@ const operacion =   (req, res) =>{
     res.send(`El resultado es ${resultado}`);
 };
 
+// Funcion que multiplica el numero recibido por 5
+const saludo =   (req, res) =>{ 
+    const { nombre } = req.params; 
+    
+    res.send(`Bienvenido Sr.. ${nombre}`);
+};
+
 
 export {
     home,
-    operacion
+    operacion,
+    saludo
 }
