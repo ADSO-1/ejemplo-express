@@ -1,24 +1,30 @@
 
-// 
+// Middleware
 const home = (req, res) =>{ 
-    res.send("Bienvenidos Estudiantes SENA - Controlador Contactos");
+    res.send("Bienvenidos Estudiantes SENA - Primer Servidor ExpressJS");
 };
 
 
-// Funcion que multiplica el numero recibido por 5
+// Middleware que multiplica el numero recibido por 5
 const operacion =   (req, res) =>{ 
     const { numero } = req.params;
     
     let resultado = numero * 5; 
     
-    res.send(`El resultado es ${resultado}`);
+    res.json({
+        "resultado" : resultado
+    });
+
 };
 
-// Funcion que multiplica el numero recibido por 5
+// Middleware que multiplica el numero recibido por 5
 const saludo =   (req, res) =>{ 
     const { nombre } = req.params; 
     
-    res.send(`Bienvenido Sr.. ${nombre}`);
+    res.json({
+        "saludo" : "Bienvenido Sr(a)",
+        "nombre" : nombre
+    });
 };
 
 

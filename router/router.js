@@ -13,11 +13,11 @@ router
     .get(home)
 
 router
-    .route('/operacion/:numero')
+    .route('/operacion/:numero') // Recibir parametros
     .get(operacion)
 
 router
-    .route('/saludo/:nombre')
+    .route('/saludo/:nombre') // Recibir parametros
     .get(saludo)
 
 export default router;
